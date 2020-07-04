@@ -13,6 +13,8 @@
     let MarketWindowSection = true; 
     //Show the config window
     let ConfigWindow = false; 
+    // info
+    let InfoWindowOpen = false; 
 /////////////////----------\\\\\\\\\\\\\\\\\
 
 
@@ -41,6 +43,7 @@ let BuildingUIbutton;
 let ConfigurationUIbutton;
 let LogOffUIbutton;
 let LeaderboardsUIbutton;
+let Credits;
 
 ////////////------------\\\\\\\\\\\\
 
@@ -75,6 +78,8 @@ const setupUI = () =>{
         ConfigurationUIbutton = new NewButton(windowWidth - 100, windowHeight - 200, 75, 75, CircleButtonGear);
         LogOffUIbutton = new NewButton(windowWidth - 100, windowHeight - 200, 75, 75, CircleButtonLogOut);
         LeaderboardsUIbutton = new NewButton(windowWidth - 100, windowHeight - 200, 75, 75, CircleButtonLeaderboards);    
+        //Z button
+        Credits = new NewButton(windowWidth - 100, windowHeight - 200, 75, 75, CircleButtonInfo);
     //----------------------------\\
 
 };
@@ -249,7 +254,26 @@ const DrawUI = () =>{
         });
         LeaderboardsUIbutton.draw();
         noTint();
-    //------------\\
+
+        //Credits UI button
+        
+        CreditsBeingHovered = false;
+        Credits.x = windowWidth - 225;
+        Credits.y = windowHeight - 225;
+        Credits.w = 75;
+        Credits.h = 75;
+        Credits.hovered(()=>{
+            Credits.w = 90;
+            Credits.h = 90;
+            Credits.x = windowWidth - 232.5;
+            Credits.y = windowHeight - 232.5;
+            tint(190, 190, 59);
+            CreditsBeingHovered = true;
+        });
+        Credits.draw();
+        noTint();
+        
+    //------------\\ 
 
 
     //Buttons hovered messages\\
@@ -268,6 +292,9 @@ const DrawUI = () =>{
         if(ConfigurationUIbuttonBeingHovered){
             UIinfo('Configuration');
         };
+       if(CreditsBeingHovered){
+           UIinfo('Info');
+       };
         if(LogOffUIbuttonBeingHovered){
             UIinfo('Log off');
         };
@@ -286,6 +313,10 @@ const DrawUI = () =>{
     //Draw the windows that overlap the game\\
         if(ConfigWindowOpen){
             DrawConfigurationWindow();
+        };
+
+        if(InfoWindowOpen){
+            DrawInfo();
         };
 
         if(LeaderboardsWindow){
@@ -334,10 +365,13 @@ const UImousePressed = () =>{
             });
 
             //Open and close the configuration window 
-            ConfigurationUIbutton.pressed(()=>{Stage = 'Config'});
-            
             ConfigurationUIbutton.pressed(()=>{
                 ConfigWindow = !ConfigWindow;
+            });
+
+            //Open and close info
+            Credits.pressed(()=>{
+                InfoWindowOpen = !InfoWindowOpen;
             });
 
             //Open and close the leaderboards window
@@ -369,6 +403,14 @@ const UImousePressed = () =>{
     };
 
     //Pressed event for the storage
+    if(InfoWindowOpen){
+        InfoMousePressed();
+    };
+
+    if(Window){
+        UIConfigMousePressed();
+    };
+    
     if(ConfigWindow){
         UIConfigMousePressed();
     };

@@ -15,7 +15,7 @@ const GetsRoute = require('./routes/gets');
 const PostsRoute = require('./routes/posts');
 
 //General Settings\\
-const DefaultPort = 3302;
+const DefaultPort = 3102;
 
 //Middleware\\
 //app.use(bodyparser.urlencoded({urlencoded: false}))

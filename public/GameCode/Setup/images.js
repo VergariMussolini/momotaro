@@ -105,10 +105,13 @@ let CircleButtonLeaderboards;
 let CircleButtonLogOut;
 let CircleButtonMap;
 let CircleButtonStorage;
+let CircleButtonInfo;
 //----------------\\
 
-//UI elements\\
+let Gabriel;
+let Vasco;
 
+//UI elements\\
 let DenyButtonImage;
 let NotificationFrame;
 let BottomFrame;
@@ -300,8 +303,8 @@ const SetupImages = () =>{
     CircleButtonStorage = loadImage('/get/image/circlebuttonStorage');
 //----------------\\
 
-//UI elements\\
 
+//UI elements\
     DenyButtonImage = loadImage('get/image/acceptbutton');
     NotificationFrame = loadImage('get/image/notificationFrame');
     BottomFrame = loadImage('get/image/bottom_frame');
@@ -324,11 +327,10 @@ const SetupImages = () =>{
     SoundOn = loadImage('get/image/SoundOn');
     SoundOff = loadImage('get/image/SoundOff');
     Invisible = loadImage('get/image/Invisible');
-
+    CircleButtonInfo = loadImage('get/image/CircleButtonInfo');
 //------------\\
 
 //Map elements\\
-
     JapanCityRestaurant = loadImage('/get/image/JapanCityRestaurant');
     JapanMap = loadImage('/get/image/JapanMap');
     JapanCityMarket = loadImage('/get/image/JapanCityMarket');

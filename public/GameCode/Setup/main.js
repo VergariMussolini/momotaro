@@ -28,6 +28,9 @@ const SetupGame = () => {
     //Config Setup
     SetupConfigUI();
 
+    //Info Setup
+    SetupInfo();
+
     //NPC
     Npcsetup();
 

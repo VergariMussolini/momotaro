@@ -100,8 +100,12 @@
 
 //--------\\
 
+
 //Images\\
 //UI
+router.get('/CircleButtonInfo', (req, res, next) =>{
+    res.sendFile(ImagesPathUI('CircleButtoInfo.png'));
+});
 
 router.get('/acceptbutton', (req, res, next) =>{
     res.sendFile(ImagesPathUI('DenyButton.png'));
