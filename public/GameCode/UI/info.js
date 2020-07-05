@@ -34,8 +34,9 @@ const DrawInfo = () =>{
     BetterText('email:', windowWidth/2-160, windowHeight/2+50);
     BetterText('gabrielvergari@hotmail.com', windowWidth/2-160, windowHeight/2+80);
     //Vasco
-    BetterText('● Senior JavaScript dev', windowWidth/2+184, windowHeight/2-80);
-    BetterText('● Junior Lua dev', windowWidth/2+184, windowHeight/2-50);
+    
+    BetterText('● Junior JavaScript dev', windowWidth/2+184, windowHeight/2-80);
+    BetterText('● Senior Lua dev', windowWidth/2+184, windowHeight/2-50);
     BetterText('● Senior UI Programmer', windowWidth/2+184, windowHeight/2-20);
     BetterText('email:', windowWidth/2+184, windowHeight/2+50);
     BetterText('vasco.soares.2001@gmail.com', windowWidth/2+184, windowHeight/2+80);
