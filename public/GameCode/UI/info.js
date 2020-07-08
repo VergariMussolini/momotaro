@@ -26,18 +26,23 @@ const DrawInfo = () =>{
     textSize(30);
     BetterText('Gabriel Vergari', windowWidth/2-160, windowHeight/2-120);
     BetterText('Vasco Soares', windowWidth/2+184, windowHeight/2-120);
-    textSize(20);
+    //ANO
+    textSize(12);
+    BetterText('2020', windowWidth/2-160, windowHeight/2-95);
+    BetterText('2020', windowWidth/2+184, windowHeight/2-95);
+
     //Gabriel
-    BetterText('● Junior JavaScript dev', windowWidth/2-160, windowHeight/2-80);
-    BetterText('● Junior Lua dev', windowWidth/2-160, windowHeight/2-50);
-    BetterText('● Junior UI Programmer', windowWidth/2-160, windowHeight/2-20);
+    textSize(20);
+    BetterText('● Junior JavaScript dev', windowWidth/2-160, windowHeight/2-75);
+    BetterText('● Junior Lua dev', windowWidth/2-160, windowHeight/2-45);
+    BetterText('● Junior UI Programmer', windowWidth/2-160, windowHeight/2-15);
     BetterText('email:', windowWidth/2-160, windowHeight/2+50);
     BetterText('gabrielvergari@hotmail.com', windowWidth/2-160, windowHeight/2+80);
     //Vasco
     
-    BetterText('● Junior JavaScript dev', windowWidth/2+184, windowHeight/2-80);
-    BetterText('● Senior Lua dev', windowWidth/2+184, windowHeight/2-50);
-    BetterText('● Senior UI Programmer', windowWidth/2+184, windowHeight/2-20);
+    BetterText('● Junior JavaScript dev', windowWidth/2+184, windowHeight/2-75);
+    BetterText('● Senior Lua dev', windowWidth/2+184, windowHeight/2-45);
+    BetterText('● Senior UI Programmer', windowWidth/2+184, windowHeight/2-15);
     BetterText('email:', windowWidth/2+184, windowHeight/2+50);
     BetterText('vasco.soares.2001@gmail.com', windowWidth/2+184, windowHeight/2+80);
 
