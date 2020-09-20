@@ -1,9 +1,0 @@
-How to play the game:
-
-1 - Open CMD
-
-2 - Drag the paste that you downloaded the game into
-
-3 - write "npm start"
-
-4 - Open your browser and write "http://localhost:3102/"
